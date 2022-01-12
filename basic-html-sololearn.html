@@ -1,5 +1,3 @@
-Here I've modified the code a little for better understanding also, added some missing ones:
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +21,8 @@ Here I've modified the code a little for better understanding also, added some m
 
         <!-- Strong and Emphasised are semantic tags. Even though they show text as bold and italics, they have other purpose also.
         They can be used in understanding speech and pronounciation etc if used properly. 
-		Browsers display <strong> as <b>, and <em> as <i>.
+		Browsers display <strong> as <b>, and <em> as <i>.
+
 However, the meanings of these tags differ: <b> and <i> define bold and italic text, respectively, while <strong> and <em> indicate that the text is "important". -->
         <p>This is a Paragpraph <br></p> <!--nested-->
         <p> This is another Paragraph </p>
@@ -157,13 +156,404 @@ Most images you will find online are copyrighted, so never ever just save an ima
 When you are browsing for a suitable image to use on your website, you can minimize your chances of violating copyright laws by clicking on "search tools"  and selecting "usage rights"
 
 ---
-
-
-
-        
         
         -->
         
+        <p style="color: yellow">HTML Ordered List</p>
+        <ol>
+        	<li>Red</li>
+        	<li>Blue</li>
+        	<li>Green </li>
+        </ol>
+
+        <ul>
+        	<li>Red</li>
+        	<li>Blue</li>
+        	<li>Green </li>
+        </ul>
         
+        <!--
+        Another useful fact - you could change the ol's type to a/A/i/I so it counts by alphabetical order or even reverse the count or start it from any number instead of 1.
+
+<ol type="a"> == counts from a, b, c etc.
+type="A" == counts as A, B, C, D..
+type="i" == counts in small roman letters
+type="I" == big roman letters.
+and if u type start="3" the count will start from 3, same goes for letters.
+Hope this helped as this topic is missing some important info
+
+		* for a list without numbers use <bl> ( bullet list )
+		
+		* ol = Ordered List, li = List Item for memorising
+
+---
+
+        There are four types of lists. (unordered list/ordered list/ description lists and horizontal list) 
+
+since most have talked on the unordered list and ordered list, I want to share small on the description list and horizontal list.
+
+Description list is a list of items with description for each item. 
+1. the <dl> tag defines a list
+2.the <dt> tag defines the item name 
+3. the <dd> tag defines the description.  Example 
+
+<html>
+   <body>
+     <h2> Description list</h2>
+<dl>
+   <dt>Tiger</dt>
+    <dd> Tiger is a cat</dd>
+
+    <dt> Lion</dt>
+     <dd> Lion is the king of cats </dd>
+</dl>
+
+</body>
+</html>... please copy and paste this in the playground to fully understand it. 
+
+---
+
+		You can add link to it :) 
+
+<html>
+    <head>
+        <title>Big Giants</title>
+    </head>
+    <body>
+        <ol type="A" start="1">
+            <li><a href="https://www.google.com">Google</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+        </ol>    
+    </body>
+</html>
+		-->
+
+		<p style="color: yellow">Creating a Table</p>
+		<!-- 
+tables defined as <table> tag.
+table rows as <tr> tag.
+table columns (table data) as <td> tag.
+		-->
+		<table>
+			<tr>
+				<th>Table Heading</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Name</td>
+				<td>Location</td>
+				<td>Seha</td>
+				<td>Malaysia</td>
+			</tr>
+		</table>
+		
+		<table border="2" bordercolor="blue" bgcolor="grey">
+<!-- border attribute not support in HTML 5 -->
+			<tr>
+				<td rowspan="2"; bgcolor="red">Red</td>
+				<td>Blue</td>
+				<td>Green</td>
+			</tr>
+			<tr>
+				<td><br/></td>
+				<td>Yellow</td>
+				<td colspan="2">Orange</td>
+			</tr>
+			
+		<hr/>
+		<hr>
+	
+<!--
+colspan (merge 2 columns)
+rowslan (merge 2 rows)
+
+---
+
+for those who wonder:
+1)why the <br /> is written between the <td> and the </td>
+it's because we have no content in that column.
+2)what does colspan attribute means..
+it defines how much space does this column occupies,in our case it occupies the space of 2 columns.
+and again we used the <br /> because even this column has no content in it.
+
+---
+
+when we change the value of colspan from 3 to 2 and then 1 we notice a difference. if we take that value upwards say 4 or 5 we don't notice anything new. this I believe informs us that colspan value change is limited to the number of specified rows. I.e col value cannot be greater than row value.
+
+-->
+		
+		
+    <table border="2">
+    <tr>
+        <th colspan="5">Time table</th>
+    </tr>
+        <tr>
+        <td rowspan="4">
+ <center>S<br>U<br>B<br>📋<br></center></td>
+        <td>monday</td>
+        <td>tuesday</td>
+        <td>wednesday</td>
+        <td>thursday</td>
+        </tr>
+        <tr>
+            <td>pys</td>
+            <td>marathi</td>
+            <td>hindi</td>
+            <td rowspan="2">eng</td>
+        </tr>
+        <tr>
+            <td rowspan="2">marathi</td>
+            <td>eng</td>
+            <td>maths</td>
+        </tr>
+        <tr> <td>hindi</td>
+            <td>sport</td>
+            <td>phy</td>
+        </tr>
+        <tr>
+            <td colspan="5"><center>INTERVAL</center></td>
+            
+            <tr>
+                <td><br></td>
+                <td colspan="2"><center>psy</center></td>
+                <td>maths</td>
+                <td>eng</td>
+            </tr>  
+        </tr>
+    </table>
+    
+    <p>Hyperlink Reference</p>
+    <a href="http://www.sololearn.com" target="_blank">Learn Playing
+    </a>
+    <!-- 
+_blank have link to open in a new window or new tab 
+_parent - Will open the page in the main/parent frame
+_top - In the top frame of browser window
+_self - will open the page in the same window as link
+
+---
+
+<a href=""> Page link
+<a href="mailto:"> e-mail link
+<a href="name"> anchor link
+<a href="#name"> internal link
+
+--> <hr>
+	
+	<p style="color: yellow">Inline and Block Elements</p>
+	<h3>Headline</h3>
+	<div style="background-color:green; color:white; padding: 20px;">
+		<p>Some paragraph text goes here.</p>
+		<p>Another paragraph text goes here.</p>
+	</div>
+	<h2>Some
+	    <span style="color:red">Important</span> Message</h2>
+	
+	<!--
+	In HTML, most elements are defined as block level or inline elements.
+Block level elements start from a new line. 
+For example: <h1>, <form>, <li>, <ol>, <ul>, <p>, <pre>, <table>, <div>, etc.
+
+Inline elements are normally displayed without line breaks. 
+For example: <b>, <a>, <strong>, <img>, <input>, <em>, <span>, etc.
+
+The <div> element is a block-level element that is often used as a container for other HTML elements.
+When used together with some CSS styling, the <div> element can be used to style blocks of content:
+
+---
+
+The <div> tag is nothing more than a container unit that covers some page elements and divides the HTML document into sections.
+In other words it just creates section(a paticular block) for your html page where you can put some text,images etc, etc, etc. 
+
+---
+
+Other elements can be used either as block level elements or inline elements. This includes the following elements:
+APPLET - embedded Java applet
+IFRAME - Inline frame
+INS - inserted text
+MAP - image  map
+OBJECT - embedded object
+SCRIPT - script within an HTML document
+
+You can insert inline elements inside block elements. For example, you can have multiple <span> elements inside a <div> element.
+Inline elements cannot contain any block level elements.
+
+---
+
+Here is what google says about each tag/element:
+
+APPLET - Just inserts a java applet in the web page. Example:
+<applet code="Bubbles.class">
+Java applet that draws bubbles.
+</applet>
+
+IFRAME - Inline Frame - Inserts a webpage in a web page. Example:
+<iframe src="https://www.sololearn.com/"></iframe>
+
+INS - Defines inserted text in a document - You see underlined text by default. Example:
+<p>Random <ins>extra</ins> text</p>
+
+MAP - Use with an image to define clickable areas. 
+Check out this example: http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_areamap
+
+OBJECT - Embed a object in a web page. Object can be: audio, video, Java/ActiveX applet, pdf, Flash etc.. Example:
+<object data="flashAnimation.swf"></object>
+
+SCRIPT - Insert a script. JavaScript by default. Example:
+<script>
+     alert("Hello World!")
+</script>
+
+---
+     -->
+    
+    <hr>
+   
+    <p style="color: yellow">Forms and Input</p>
+    <form method="POST">
+    	<img src="image.png"/><br/>
+    	<input type="text" name="name">
+    	<input type="submit" name="Submit">
+    </form>
+    <form action="http://www.sololearn.com">
+    </form>
+    <!-- Use the action attribute to point to a webpage that will load after the user submits the form. -->
+    <form action="url" method="GET">
+    <form action="url" method="POST">
+    </form>
+    	<!-- The method attribute specifies the HTTP method (GET or POST) to be used when forms are submitted.
+    When you use GET, the form data will be visible in the page address.
+Use POST if the form is updating data, or includes sensitive information (passwords).
+POST offers better security because the submitted data is not visible in the page address. 
+
+---
+
+<input> to take input from user.
+input tag has no end tag.
+
+-->
+	
+    	<form>
+    	    <input type="text" name="username"/> <br>
+    	    <input type="password" name="password"/>
+        </form>
+    
+    <!-- 
+    Use <label> to create label before input box.
+
+<form>
+    <label>Username </label>
+    <input type="text" name="username"/></br>
+    <label>Password </label>
+    <input type="password" name="password"/>
+</form>
+
+---
+
+You can make a submit button after your password and username inputs.
+
+<form>
+   <label>Username</label>
+      <input type="text" name="Username"/>
+   <label>Password</label>
+      <input type="password" name="Password"/>
+   <input type="submit" name="submit"/>
+
+And you can change what it says with the value attribute.
+
+   <input type="submit" value="Send"/>
+   
+-->
+	
+	<!-- If we change the input type to radio, it allows the user select only one of a number of choices: -->
+		<input type="radio" name="gender" value="male"/>Male<br>
+		<input type="radio" name="gender" value="female"/>Female<br>
+	<!-- The type "checkbox" allows the user to select more than one option: -->
+		<input type="checkbox" name="gender" value="1"/>Male<br>
+		<input type="checkbox" name="gender" value="2"/>Female<br>
+			
+		<form method="POST" action="#">
+			<input type="text" name="name">
+			<input type="submit" name="submit">
+	<!-- The submit button submits a form to its action attribute: -->
+			<input type="submit" value="Submit">
+		</form>
+
+
+<!--
+Grouping Form Data with <fieldset>
+you can group all related data in one form check the next code
+
+<form>
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" value="Mohamed"><br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Ibrahim"><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+Legend is element defines a caption for the <fieldset> element
+
+-->
+
+   <p style="color: yellow">HTML Colors</p>
+   <h1>
+   	<font color="#0000FF">Blue Headline</font>
+   </h1>
+   
+   <!-- over 16millions combination rgb.
+		HTML colors are expressed as hexadecimal values.
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
+
+		As you can see, there are 16 values there, 0 through F. Zero represents the lowest value, and F represents the highest.
+
+		Colors are displayed in combinations of red, green, and blue light (RGB).
+Hex values are written using the hashtag symbol (#), followed by either three or six hex characters.
+
+---
+
+Some simple ones, good for testing:
+
+#FF0000 - #F00 - red
+#00FF00 - #0F0 - green
+#0000FF - #00F - blue
+
+#FFFF00 - #FF0 - yellow
+#00FFFF - #0FF - cyan
+#FF00FF - #F0F - magneta
+
+#FF8800 - #F80 - orange
+#884400 - #840 - brown
+#880088 - #808 - purple
+
+#FFFFFF - #FFF - white
+#888888 - #888 - grey
+#000000 - #000 - black
+
+If you lower each RGB value of a color equally you will get the darker version of it.
+
+		-->
+			<hr>
+			<p style="color: yellow">Frames</p>
+			<!--
+		A page can be divided into frames using a special frame document.  
+
+The <frame> tag defines one specific window (frame) within a <frameset>. Each <frame> in a <frameset> can have different attributes, such as border, scrolling, the ability to resize, etc. 
+
+The <frameset> element specifies the number of columns or rows in the frameset, as well as what percentage or number of pixels of space each of them occupies.
+
+---
+
+The <frameset> tag is not supported in HTML5.
+
+---
+I was a web developer (mostly back-end but still) and I've never seen one of these in action, you can safely ignore this chapter.
+-->
+      <frameset cols="100, 25%, *"></frameset>
+      <frameset rows="100, 25%, *"> </frameset>
+       
     </body> 
 </html>       
