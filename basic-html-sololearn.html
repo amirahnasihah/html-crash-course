@@ -25,7 +25,7 @@ Here I've modified the code a little for better understanding also, added some m
         They can be used in understanding speech and pronounciation etc if used properly. 
 		Browsers display <strong> as <b>, and <em> as <i>.
 However, the meanings of these tags differ: <b> and <i> define bold and italic text, respectively, while <strong> and <em> indicate that the text is "important". -->
-        <p>This is a Paragpraph</p>
+        <p>This is a Paragpraph <br></p> <!--nested-->
         <p> This is another Paragraph </p>
         <p> This is <br /> a line break </p>
         <hr />
@@ -46,8 +46,123 @@ Subscript: H₂O
         <p><u> inserted or underlined text </u></p>
         <p><del>deleted text</del></p>
         <p><s> deleted or striked text </s></p>
+        <hr>
+        	<!--
+        Attributes provide additional information about an element or a tag, while also modifying them. Most attributes have a value; the value modifies the attribute.
+        -->
+       <p align="center">This text is aligned to center</p>
+       <p><center>centered text</center>
+       <p align="center">This is a text<br />
+       	<hr width="10%" align="right" />This is also a text
+       </p>
+       <!--
+       The align attribute of <p> is not supported in HTML5.
+       
+       There is no need of <br /> tag. 
+<br /> tag is used for move to the next line without any space in between the lines.
+		<hr /> tag has its own private line, you cannot type any text on "hr" line. Whenever you use <hr/> tag you'll be automatically redirect to next line to create a horizontal line. So using <br/> before <hr/> is useless.. 
+		"This is a text" is aligned to center... But "This is also a text" is not aligned to center, even they both are in <p> means Paragraph tag. It is because in between this two sentences they have used <hr/> tag. 
+         This type of tags (<hr/>) are self ended tags. And this tags terminate the previous attribute, and after applying this tags the previous attribute does not affect on the next text which is used after this (<hr/>) type of  tags. 
+		That is why "This is also a text" is shifted to left side which is default. 
+       -->
+       
+       	<!--
+       Now that we've gotten to attributes, here is a very important one. 
+
+<html lang=" ">
+	
+This is used to set the language of the html page and is important for internationalization and SEO.
+			-->
+
+<!-- For English: -->
+<html lang="en">
+
+<!-- For English (USA) -->
+<html lang="en-US">
+
+<!-- For English (UK) -->
+<html lang="en-GB">
+	
+        <hr width="50px" />
+        <hr width="50%" />
+        <hr width="50"/>
+        <hr width="50pt"/>
+        <!-- An element's width can be defined using pixels or percentages. 
+		Pay attention carefully about these two definitions , They're very tricky and look alike , but they're not the same and completely different , 50px means 50 pixels in measures , and does never change , but 50% means half of full width that your screen can take to show elements , and it's changing , because all of the users don't have the same sizes. -->
+        
+        <img src="image.jpg" height="50px" width="50px" border="50px" alt="image desc"/>
+        <!--
+img : image
+SRC : source
+jpg : joint photographic group
+JPEG : joint photographic Experts group.
+
+		Color does not work in border attribute. You can specify it as 2px , but you can't add a color.If one wants to stylized it like that, you have to use the 'style' attribute. You'd write it up like this in your 'img' tag: style="border: solid 2px red;"
+This would then bring you into the wonderful world of css.
+
+---        
+
+		Re-sizing images has negative score in SEO ranks. and its better to use the original size. 
+		
+		It's better to edit the image instead of resizing because you will reduce the size (kiloBytes) of your page which will reduce bandwidth usage and make your page load faster.
+		
+		Never use html for styling, use css.
+		
+		There is a special image file format that was developed by Google which is intended to increase the efficiency of loading and rendering images. It's called WebP (and the file extension is .webp). The WebP format is so efficient that WebP images can be loaded and rendered almost instantaneously. Plenty of online tools can convert images to the WebP format, such as online-convert.com.
+
+---
+        
+        In case the image cannot be displayed, the alt attribute specifies an alternate text that describes the image in words. The alt attribute is required.
+
+---
+        
+        To add an image (even if it's not in the same folder as the html file) simply:
+1) left-click the image
+2) click on properties
+3) now you can see "Location:"
+4) copy that location and paste it after src attribute
+5) add "\" and then write the name of the picture followed by ".jpg"
+6) close the quotations and YOU ARE DONE!
+
+---
+
+		If you want to add a caption to your image use this form:
+
+<figure>
+        <img src="painting.jpg" alt="The Scream">
+        <figcaption>
+               <cite>The Scream</cite> by Edward Munch
+        </figcaption>
+</figure>
+
+... where <cite> represents the title of the image (painting in this example).
+<figure> usually represents an illustration and it's caption (figcaption).
+
+--- 
+
+		best way to do this;
+*create a folder and name it "HTML codes", save all your codes here such as index.html etc
+
+*then create another folder and name it "images"  and save the image you want to use Here with a name like "man"
+
+*now go to your code where you want to attach the image and write your code like this
+ <img  src="images/man.jpg" />
+ 
+ ---
+ 
+ IMPORTANT TIP:
+
+Most images you will find online are copyrighted, so never ever just save an image from Google and use it on your website.
+
+When you are browsing for a suitable image to use on your website, you can minimize your chances of violating copyright laws by clicking on "search tools"  and selecting "usage rights"
+
+---
+
+
+
         
         
+        -->
         
         
     </body> 
